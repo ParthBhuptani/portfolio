@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Konami } from "@/components/konami";
-import Script from "next/script";
+// import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -143,7 +143,7 @@ export default function RootLayout({
           <main className="relative z-10">{children}</main>
           <Footer />
           <Konami />
-          <Script src="/oneko.js" strategy="lazyOnload" />
+          {/* <Script src="/oneko.js" strategy="lazyOnload" /> */}
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
