@@ -41,15 +41,15 @@ export const site = {
   greeting: "Hey, I'm Parth",
   tagline: "I build clean, modern websites and web apps where design, functionality, and even the smallest details matter.",
   about: [
-    "Hey, I'm Parth, a full stack developer who loves building clean, modern websites and apps where design, functionality, and even the smallest details matter, with a focus on making products that are both practical and visually satisfying.",
-    "I spend most of my time in the terminal, the browser, or scribbling on a whiteboard. I lean backend,not because I don't like frontend, but because I enjoy making polished things actually hold up.",
-    "I don't ship junk. Maintainability isn't optional. And I build best when I'm curious.",
+    "Hey, I'm Parth, a final-year Information and Communication Technology student who enjoys building modern web applications with a focus on clean design, functionality, and thoughtful user experiences.",
+    "I enjoy turning ideas into real projects, whether it's through hackathons, personal work, or open source. Building products, solving problems, and learning along the way are what keep me motivated.",
+    "I'm currently expanding my skills in full stack development while strengthening my understanding of DSA and system design. My goal is to build software that is reliable, practical, and enjoyable to use.",
   ],
   tldr: [
-    "Building products.",
-    "Learning technologies.",
-    "Shipping consistently.",
-    "Obsessed with clean code.",
+    "Building full stack applications.",
+    "Learning DSA and System design.",
+    "Contributing to open source.",
+    "Focus on writing clean code.",
   ],
   status: {
     available: true,
