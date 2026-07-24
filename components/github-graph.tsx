@@ -118,7 +118,7 @@ export function GitHubGraph() {
 
   return (
     <section className="mx-auto w-full max-w-content px-6 py-16">
-      <SectionHeader id="github" index="05" title="in code" />
+      <SectionHeader id="github" index="05" title="GitHub Activity" />
 
       <Reveal delay={0.1}>
         <div className="rounded-2xl border bg-surface/30 p-5">

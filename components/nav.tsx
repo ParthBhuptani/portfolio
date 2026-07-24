@@ -11,10 +11,10 @@ import { CommandPalette } from "./command-palette";
 
 
 const links = [
-  { href: "#about", label: "about" },
-  { href: "#work", label: "work" },
-  { href: "#projects", label: "projects" },
-  { href: "#contact", label: "contact" },
+  { href: "#about", label: "About" },
+  { href: "#work", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
 ];
 
 function SunMoon({ theme }: { theme: string }) {
@@ -79,7 +79,7 @@ export function Nav() {
             alt={site.initials} 
             className="h-7 w-7 rounded-full object-cover ring-1 ring-accent/30 transition-transform group-hover:rotate-12" 
           />
-          <span className="hidden sm:inline">{site.name.split(" ")[0].toLowerCase()}</span>
+          <span className="hidden sm:inline">{site.name.split(" ")[0]}</span>
         </a>
 
         <div className="hidden items-center gap-1 md:flex">

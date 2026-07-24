@@ -8,7 +8,7 @@ export function Writing() {
   return (
 
     <section className="mx-auto w-full max-w-content px-6 py-16">
-      <SectionHeader id="writing" index="05" title="writing" />
+      <SectionHeader id="writing" index="05" title="Writing" />
 
       <div className="divide-y divide-border">
         {site.writing.map((post, i) => (

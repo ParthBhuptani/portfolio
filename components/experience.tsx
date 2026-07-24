@@ -8,7 +8,7 @@ export function Experience() {
 
   return (
     <section className="mx-auto w-full max-w-content px-6 py-16">
-      <SectionHeader id="work" index="02" title="where I've worked" />
+      <SectionHeader id="work" index="02" title="Experience" />
 
       <div className="space-y-3">
         {site.experience.map((job, i) => {

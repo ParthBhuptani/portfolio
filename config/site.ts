@@ -38,7 +38,7 @@ export const site = {
   location: "Ahmedabad, India",
   timezone: "Asia/Kolkata",
   email: "parthbhuptani10@gmail.com",
-  greeting: "Hey, I'm Parth",
+  // greeting: "Hey, I'm Parth",
   tagline: "I build clean, modern websites and web apps where design, functionality, and even the smallest details matter.",
   about: [
     "Hey, I'm Parth, a final-year Information and Communication Technology student who enjoys building modern web applications with a focus on clean design, functionality, and thoughtful user experiences.",

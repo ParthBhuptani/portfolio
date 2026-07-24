@@ -180,7 +180,7 @@ export function Projects() {
 
   return (
     <section className="mx-auto w-full max-w-content px-6 py-16">
-      <SectionHeader id="projects" index="03" title="things I've built" />
+      <SectionHeader id="projects" index="03" title="Projects" />
 
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
         {site.projects
