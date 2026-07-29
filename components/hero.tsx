@@ -27,7 +27,7 @@ export function Hero() {
   useEffect(() => {
     let timer: NodeJS.Timeout;
     const fullText = roles[roleIndex];
-    
+
     const typingSpeed = isDeleting ? 30 : 60;
     const delayBeforeDelete = 2000;
     const delayBeforeType = 400;
@@ -36,7 +36,7 @@ export function Hero() {
       if (!isDeleting) {
         const nextText = fullText.slice(0, currentText.length + 1);
         setCurrentText(nextText);
-        
+
         if (nextText === fullText) {
           timer = setTimeout(() => setIsDeleting(true), delayBeforeDelete);
           return;
@@ -44,15 +44,15 @@ export function Hero() {
       } else {
         const nextText = fullText.slice(0, currentText.length - 1);
         setCurrentText(nextText);
-        
+
         if (nextText === "") {
           setIsDeleting(false);
           setRoleIndex((prev) => (prev + 1) % roles.length);
-          timer = setTimeout(() => {}, delayBeforeType);
+          timer = setTimeout(() => { }, delayBeforeType);
           return;
         }
       }
-      
+
       timer = setTimeout(tick, typingSpeed);
     };
 
@@ -77,8 +77,8 @@ export function Hero() {
           className="font-mono text-sm text-accent"
         >
           {/* {site.greeting} */}
-          {/* <span className="ml-0.5 inline-block w-[2px] animate-[blink_3s_infinite] bg-accent">&nbsp;</span> */}
-        {/* </motion.p> */ }
+        {/* <span className="ml-0.5 inline-block w-[2px] animate-[blink_3s_infinite] bg-accent">&nbsp;</span> */}
+        {/* </motion.p> */}
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-6">
           <motion.div
@@ -86,7 +86,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             onClick={handleNextImage}
-            className="relative h-28 w-28 shrink-0 sm:h-32 sm:w-32 group cursor-pointer select-none"
+            className="relative h-24 w-24 shrink-0 sm:h-28 sm:w-28 md:h-32 md:w-32 group cursor-pointer select-none"
             title="Click to change profile image"
           >
             {/* Main Avatar Image */}
@@ -95,14 +95,14 @@ export function Hero() {
               alt="Profile"
               className="h-full w-full rounded-2xl object-cover border border-border shadow-xl transition-all pointer-events-none"
             />
-            
+
             {/* Chromatic aberration split channel 1 on hover
             <img
               src={site.profileImages[imgIndex]}
               alt="Profile Glitch Red"
               className="absolute inset-0 h-full w-full rounded-2xl object-cover border border-border pointer-events-none opacity-0 group-hover:opacity-70 filter saturate-150 hue-rotate-[90deg] mix-blend-screen transition-all duration-75 ease-out glitch-img-1"
             /> */}
-            
+
             {/* Chromatic aberration split channel 2 on hover
             <img
               src={site.profileImages[imgIndex]}
@@ -132,7 +132,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl"
+            className="text-[2.2rem] font-bold leading-[1.05] tracking-tight sm:text-6xl"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-fg to-muted">
               {site.name}.
@@ -149,16 +149,24 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
+          className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-muted"
         >
-          {site.tagline}
+          <>
+            <span className="sm:hidden">
+              Building modern web apps with clean design and thoughtful user experiences.
+            </span>
+
+            <span className="hidden sm:inline">
+              {site.tagline}
+            </span>
+          </>
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 flex flex-wrap items-center gap-4"
+          className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2 sm:gap-4"
         >
           <a
             href="#projects"
@@ -175,7 +183,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 grid gap-3 sm:grid-cols-3"
+          className="mt-8 sm:mt-12 grid gap-3 sm:grid-cols-3"
         >
           {site.status.available && (
             <div className="flex items-center gap-2 rounded-2xl border bg-surface/30 px-4 py-3 text-sm">
