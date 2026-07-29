@@ -48,7 +48,7 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
         <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
         <div>
           {p.image && (
-            <div className="relative mb-4 aspect-[16/10] w-full overflow-hidden rounded-xl border bg-fg/[0.03]">
+            <div className="relative mb-4 aspect-[16/9] w-full overflow-hidden rounded-xl border bg-fg/[0.03]">
               <img
                 src={p.image}
                 alt={`${p.title} screenshot`}
@@ -129,7 +129,7 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
               onClick={() => setIsExpanded(!isExpanded)}
               className="flex items-center gap-1.5 text-xs font-mono font-medium text-muted hover:text-accent transition-colors cursor-pointer"
             >
-              {isExpanded ? "Hide details" : "Show details"}
+              {isExpanded ? "Hide details" : "View details"}
               <svg
                 className={`h-3 w-3 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
                 fill="none"
@@ -152,7 +152,7 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
                 className="overflow-hidden"
               >
                 {p.story && (
-                  <div className="mt-3 border-t border-border/50 pt-3">
+                  <div className="mt-3 border-t border-border/50 pt-3 max-h-44 overflow-y-auto pr-1">
                     <div className="text-xs leading-relaxed text-faint space-y-1.5">
                       {p.story.split("\n\n").map((para, idx) => {
                         const isItalic = para.startsWith("*") && para.endsWith("*");
@@ -195,7 +195,7 @@ export function Projects() {
           href="/projects"
           className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-5 py-2.5 text-sm font-medium hover:bg-surface hover:text-accent transition-[transform,box-shadow,border-color] duration-300 hover:scale-[1.03]"
         >
-          view full project archive →
+          View Project Archive →
         </Link>
       </div>
     </section>

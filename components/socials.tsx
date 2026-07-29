@@ -93,13 +93,19 @@ const hoverCardsData: Record<string, {
   // },
 };
 
-export function Socials({ className = "" }: { className?: string }) {
+export function Socials({
+  className = "",
+  showEmail = true,
+}: {
+  className?: string;
+  showEmail?: boolean;
+}) {
   const [hoveredKey, setHoveredKey] = useState<string | null>(null);
 
   return (
     <div className={`flex flex-wrap items-center gap-3.5 ${className}`}>
       {items
-        .filter((i) => i.href)
+        .filter((i) => i.href && (showEmail || i.key !== "email"))
         .map(({ key, href, Icon }) => {
           const card = hoverCardsData[key];
 

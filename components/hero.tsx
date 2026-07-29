@@ -174,7 +174,7 @@ export function Hero() {
           >
             See My Work
           </a>
-          <Socials />
+          <Socials showEmail />
         </motion.div>
 
 

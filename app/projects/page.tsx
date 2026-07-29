@@ -52,10 +52,10 @@ export default function ProjectsPage() {
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
-          projects archive
+          Projects Archive
         </h1>
         <p className="mt-3 text-muted leading-relaxed">
-          A list of things I&apos;ve built, experiments I&apos;ve designed, and applications I&apos;m currently forging.
+          A collection of projects showcasing full-stack development, AI integrations, and open-source contributions.
         </p>
       </div>
 
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <input
             type="text"
-            placeholder="Search by name, technology..."
+            placeholder="Search projects or technologies..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full rounded-full border bg-surface/30 px-9 py-2 text-sm placeholder:text-muted-foreground outline-none focus:border-accent/40 focus:ring-1 focus:ring-accent/20 transition-all text-foreground"

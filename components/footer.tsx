@@ -16,7 +16,7 @@ export function Footer() {
           Let&apos;s build something.
         </h2>
         <p className="mt-3 max-w-md text-muted">
-          Got an idea, a role, or just want to say hi? My inbox is always open.
+          Interested in collaborating, discussing an opportunity, or just saying hello? Feel free to reach out—I'd love to connect.
         </p>
 
         <a
@@ -27,7 +27,7 @@ export function Footer() {
         </a>
 
         <div className="mt-8">
-          <Socials />
+          <Socials showEmail={false} />
         </div>
       </div>
 

@@ -41,15 +41,15 @@ export const site = {
   // greeting: "Hey, I'm Parth",
   tagline: "I build clean, modern websites and web apps where design, functionality, and even the smallest details matter.",
   about: [
-    "Hey, I'm Parth, a final-year Information and Communication Technology student who enjoys building modern web applications with a focus on clean design, functionality, and thoughtful user experiences.",
-    "I enjoy turning ideas into real projects, whether it's through hackathons, personal work, or open source. Building products, solving problems, and learning along the way are what keep me motivated.",
+    "Hey, I'm Parth, a final-year Information and Communication Technology student passionate about building modern web applications with clean design, functionality, and thoughtful user experiences.",
+    "I enjoy turning ideas into real projects, whether it's through hackathons, personal work, or open source. Building products, solving problems, and continuously learning are what keep me motivated.",
     "I'm currently expanding my skills in full stack development while strengthening my understanding of DSA and system design. My goal is to build software that is reliable, practical, and enjoyable to use.",
   ],
   tldr: [
-    "Building full stack applications.",
-    "Learning DSA and System design.",
+    "Building full-stack applications.",
+    "Learning DSA and System Design.",
     "Contributing to open source.",
-    "Focus on writing clean code.",
+    "Writing clean, maintainable code",
   ],
   status: {
     available: true,
@@ -69,23 +69,31 @@ export const site = {
   },
   experience: [
     {
+      company: "FlyRank AI",
+      role: "Frontend AI Engineer Intern",
+      period: "2026 — Present",
+      blurb:
+        "Building responsive AI-powered frontend interfaces and collaborating with the engineering team to develop production-ready web applications.",
+      url: "https://internship.flyrank.ai/intern",
+    },
+    {
       company: "Independent Developer",
-      role: "Frontend Developer",
+      role: "Full Stack Developer",
       period: "2025 — Present",
       blurb:
-        "Built and deployed multiple SPAs & web applications. Engaged in competitive coding events like the Smart India Hackathon and HT codeathon.",
-      url: "",
+        "Built and deployed AI-powered full-stack applications including FitTrack, SplitSmart, and AI Travel Planner while strengthening full-stack development through real-world projects.",
     },
   ] as Job[],
   projects: [
     {
       title: "FitTrack",
-      blurb: "An AI-powered fitness platform that generates personalized 7-day workout and meal plans based on each user's goals, lifestyle, injuries, dietary preferences, and available equipment.",
-      story: "Built with React, TypeScript, and Google Gemini, FitTrack creates tailored fitness and nutrition plans in real time while providing an AI coach for follow-up guidance. It also includes workout timers, progress tracking, hydration monitoring, interactive charts, and secure serverless AI integration with automatic API key fallback.\n\n*Designed for personalization • Built for real-world fitness planning.*",
+      blurb: "AI-powered fitness platform that generates personalized workout and diet plans using Google Gemini AI.",
+      story: "Built with React, TypeScript, Tailwind CSS, and Google Gemini AI. FitTrack generates personalized workout and nutrition plans, includes progress tracking, hydration monitoring, interactive charts, and an AI coach for real-time guidance.\n\n*Designed for personalized fitness • Built with AI.*",
       stack: [
         "React",
         "TypeScript",
         "Google Gemini API",
+        "Supabase",
         "Recharts",
         "Vite",
         "Tailwind CSS",
@@ -102,8 +110,8 @@ export const site = {
     },
     {
       title: "SplitSmart",
-      blurb: "An AI-powered expense splitting application that simplifies shared bills with intelligent bill parsing, multiple split methods, and optimized settlement calculations for groups.",
-      story: "Built with React, TypeScript, Tailwind CSS, and Google Gemini, SplitSmart supports equal, item-based, and percentage-based bill splitting while automatically extracting bill items from text or images using AI. It features smart settlement optimization, persistent group management, expense history, and serverless AI integration for a seamless bill-sharing experience.\n\n*Designed for effortless group payments • Built for intelligent expense management.*",
+      blurb: "AI-powered expense splitting app with bill parsing, smart settlement, and group expense management.",
+      story: "Built with React, TypeScript, Tailwind CSS, and Google Gemini AI. SplitSmart extracts bill items from text or images, supports multiple split methods, optimizes settlements, and manages shared expenses with persistent group history.\n\n*Designed for effortless bill sharing • Built with AI.*",
       stack: [
         "React",
         "TypeScript",
@@ -124,8 +132,8 @@ export const site = {
     },
     {
       title: "AI Travel Planner",
-      blurb: "An AI-powered travel planning application that generates optimized multi-city itineraries, travel routes, budget allocation, and personalized activity recommendations in seconds.",
-      story: "Built with Python, Streamlit, and Scikit-learn, the application combines machine learning with geospatial visualization to recommend destinations, optimize travel routes, distribute budgets across cities, and generate complete day-wise itineraries. Interactive maps and curated travel insights provide users with an end-to-end trip planning experience.\n\n*Designed for smarter travel • Built with AI-driven recommendations.*",
+      blurb: "AI-powered travel planner that creates personalized itineraries, optimizes routes, and estimates travel budgets.",
+      story: "Built with Python, Streamlit, Scikit-learn, and Pandas. The application generates personalized travel itineraries, recommends destinations, optimizes routes, and visualizes trips with interactive maps.\n\n*Designed for smarter travel planning • Powered by AI.*",
       stack: [
         "Python",
         "Streamlit",
@@ -145,8 +153,8 @@ export const site = {
     },
     {
       title: "FitMart (Open Source)",
-      blurb: "Contributed to a community-driven MERN fitness e-commerce platform by resolving issues, improving features, and collaborating through pull requests.",
-      story: "Worked on a production-scale React and Node.js application, contributing bug fixes and enhancements while following GitHub workflows, code reviews, and collaborative development practices.\n\n*Open source contribution • Production-scale collaboration.*",
+      blurb: "Contributed three merged pull requests to a production-scale open-source MERN fitness e-commerce platform.",
+      story: "Contributed bug fixes and feature improvements to a production-scale MERN application while collaborating through GitHub pull requests, code reviews, and open-source development workflows.\n\n*3 merged pull requests • Open-source collaboration.*",
       stack: [
         "React",
         "Node.js",
@@ -154,6 +162,7 @@ export const site = {
         "MongoDB",
         "Firebase",
         "Tailwind CSS",
+        "Git",
       ],
       year: "2026",
       links: {
@@ -183,35 +192,30 @@ export const site = {
     // },
   ] as Project[],
   skills: [
-    "TypeScript",
-    "JavaScript",
     "React",
     "Next.js",
+    "TypeScript",
+    "JavaScript",
     "Node.js",
     "Express.js",
     "Tailwind CSS",
-    // "Shadcn UI",
-    "PostgreSQL",
     "MongoDB",
-    // "Prisma",
+    "PostgreSQL",
     "Supabase",
     "Firebase",
     "REST APIs",
-    // "JWT",
     "Git",
     "GitHub",
-    // "Postman",
     "Vercel",
-    // "Figma",
-    "C++",
     "Python",
+    "C++",
   ],
   writing: [] as Post[],
   github: {
     username: "ParthBhuptani",
-    contributionsLastYear: "500+",
+    contributionsLastYear: "250+",
   },
-  footerNote: "Built with ❤️ and hardwork "
+  footerNote: "Built with ❤️ and hard work "
 } as const;
 
 export type Site = typeof site;
