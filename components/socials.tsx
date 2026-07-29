@@ -3,15 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { site } from "@/config/site";
-import { 
-  GitHubIcon, 
-  LinkedInIcon, 
-  TwitterIcon, 
-  MailIcon, 
-  FileIcon, 
-  DiscordIcon, 
-  MediumIcon 
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  TwitterIcon,
+  MailIcon,
+  FileIcon,
+  DiscordIcon,
+  MediumIcon
 } from "./icons";
+import Image from "next/image";
 
 const items = [
   { key: "github", href: site.socials.github, Icon: GitHubIcon },
@@ -24,6 +25,8 @@ const items = [
 ];
 
 const hoverCardsData: Record<string, {
+  avatar: string;
+  avatarClass?: string;
   pronouns?: string;
   handle: string;
   bio: string;
@@ -32,55 +35,62 @@ const hoverCardsData: Record<string, {
   bannerGradient: string;
 }> = {
   github: {
+    avatar: "/profile.jpg",
     handle: "@ParthBhuptani",
-    bio: "Full Stack Developer. Building products, learning technologies, shipping consistently. Obsessed with clean code.",
-    stats: ["5+ Projects", "500+ Contributions"],
+    bio: "Building full-stack applications, AI-powered tools, and contributing to open source through real-world projects.",
+    stats: ["5+ Projects", "Open Source"],
     bannerText: "learn • build • ship",
     bannerGradient: "from-neutral-900 to-neutral-800",
   },
   linkedin: {
+    avatar: "/social/linkedin.jpg",
+    avatarClass: "scale-110 object-top",
     pronouns: "He/Him",
     handle: "in/parth-bhuptani",
-    bio: "Frontend & Backend Developer. Experienced in React, Next.js, Node.js, and database systems.",
-    stats: ["Open for Work", "Delhi, India"],
-    bannerText: "network • build • impact",
+    bio: "Building full-stack applications while continuously learning through real-world projects.",
+    stats: ["Open for Work", "Gujarat, India"],
+    bannerText: "network • build • grow",
     bannerGradient: "from-blue-900 to-blue-800",
   },
   twitter: {
+    avatar: "/profile.jpg",
     handle: "@ParthBhuptani10",
-    bio: "Building clean, modern web apps where design, functionality, and even the smallest details matter.",
-    stats: ["100+ Followers", "Open Source"],
-    bannerText: "connect • share • grow",
-    bannerGradient: "from-sky-900 to-indigo-900",
+    bio: "Sharing projects, portfolio updates, open-source contributions, hackathons, and my developer journey.",
+    stats: ["Build in Public", "Open Source"],
+    bannerText: "build • share • learn",
+    bannerGradient: "from-zinc-900 to-slate-800",
   },
   medium: {
+    avatar: "/social/medium.jpg",
     handle: "@parthbhuptani",
-    bio: "Writing technical articles about software development, system design, Next.js, and backend architecture.",
-    stats: ["Tech Writer", "Publications"],
-    bannerText: "write • share • read",
+    bio: "Writing about full-stack development, AI, project building, and lessons learned along the way.",
+    stats: ["Project Stories", "Technical Writing"],
+    bannerText: "learn • write • share",
     bannerGradient: "from-neutral-800 to-zinc-950",
   },
   email: {
+    avatar: "/social/linkedin.jpg",
+    avatarClass: "scale-110 object-top",
     handle: "parthbhuptani10@gmail.com",
-    bio: "Available for contract work, internship opportunities, and collaborative software engineering projects.",
-    stats: ["Fast Response", "Direct Email"],
-    bannerText: "collab • contact • direct",
+    bio: "Available for internships, collaborations, freelance work, and software engineering opportunities.",
+    stats: ["Quick Response", "Let's Connect"],
+    bannerText: "collab • connect • build",
     bannerGradient: "from-rose-900 to-orange-900",
   },
-  resume: {
-    handle: "Curriculum Vitae",
-    bio: "View academic records (SIH Hackathon Winner), key developer skills, and internship details.",
-    stats: ["PDF Format", "1-Page Resume"],
-    bannerText: "skills • experience • cv",
-    bannerGradient: "from-teal-900 to-emerald-900",
-  },
-  discord: {
-    handle: "parthbhuptani",
-    bio: "Join my server or drop a DM to chat about web dev, coding challenges, or side projects.",
-    stats: ["Developer Server", "Chat Active"],
-    bannerText: "hangout • chat • code",
-    bannerGradient: "from-indigo-950 to-purple-900",
-  },
+  // resume: {
+  //   handle: "Curriculum Vitae",
+  //   bio: "View academic records (SIH Hackathon Winner), key developer skills, and internship details.",
+  //   stats: ["PDF Format", "1-Page Resume"],
+  //   bannerText: "skills • experience • cv",
+  //   bannerGradient: "from-teal-900 to-emerald-900",
+  // },
+  // discord: {
+  //   handle: "parthbhuptani",
+  //   bio: "Join my server or drop a DM to chat about web dev, coding challenges, or side projects.",
+  //   stats: ["Developer Server", "Chat Active"],
+  //   bannerText: "hangout • chat • code",
+  //   bannerGradient: "from-indigo-950 to-purple-900",
+  // },
 };
 
 export function Socials({ className = "" }: { className?: string }) {
@@ -117,7 +127,7 @@ export function Socials({ className = "" }: { className?: string }) {
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95, y: 12 }}
                     transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 z-50 w-72 overflow-hidden rounded-2xl border bg-surface/95 shadow-2xl backdrop-blur-xl pointer-events-none select-none border-border/80"
+                    className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3.5 z-50 w-[260px] overflow-hidden rounded-2xl border bg-surface/95 shadow-2xl backdrop-blur-xl pointer-events-none select-none border-border/80"
                   >
                     {/* Banner header */}
                     <div className={`relative h-20 w-full overflow-hidden bg-gradient-to-r ${card.bannerGradient} flex items-center justify-center`}>
@@ -131,11 +141,12 @@ export function Socials({ className = "" }: { className?: string }) {
                     {/* Profile body details */}
                     <div className="relative px-4 pb-4 pt-1">
                       {/* Avatar */}
-                      <div className="absolute -top-6 left-4 h-12 w-12 rounded-full border-2 border-surface bg-bg overflow-hidden shadow-md">
-                        <img 
-                          src={site.profileImages[0]} 
-                          alt="Avatar" 
-                          className="w-full h-full object-cover" 
+                      <div className="absolute -top-6 left-4 h-12 w-12 rounded-full border-2 border-white/10 bg-bg overflow-hidden shadow-md">
+                        <Image
+                          src={card.avatar}
+                          alt={`${site.name} profile`}
+                          fill
+                          className={`w-full h-full object-cover transition-transform duration-300 ${card.avatarClass ?? ""}`}
                         />
                       </div>
 
@@ -145,7 +156,7 @@ export function Socials({ className = "" }: { className?: string }) {
                             {site.name}
                           </span>
                           <svg className="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                           </svg>
                           {card.pronouns && (
                             <span className="text-[9px] font-mono text-muted-foreground bg-surface/50 border rounded-md px-1.5 py-0.2">
