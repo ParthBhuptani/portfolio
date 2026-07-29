@@ -16,9 +16,9 @@ export function Hero() {
   };
 
   const roles = [
-    "Full Stack Developer.",
-    "Open Source Contributor.",
-    "Problem Solver."
+    "Full Stack Developer",
+    "Open Source Contributor",
+    "Problem Solver"
   ];
   const [roleIndex, setRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -69,8 +69,8 @@ export function Hero() {
       <div className="bg-grid pointer-events-none absolute inset-0 -z-10" />
       <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-accent/5 blur-[60px]" />
 
-      <div className="mx-auto w-full max-w-content pt-10">
-        <motion.p
+      <div className="mx-auto w-full max-w-content pt-16 lg:pt-10">
+        {/* <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -78,9 +78,9 @@ export function Hero() {
         >
           {/* {site.greeting} */}
           {/* <span className="ml-0.5 inline-block w-[2px] animate-[blink_3s_infinite] bg-accent">&nbsp;</span> */}
-        </motion.p>
+        {/* </motion.p> */ }
 
-        <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
