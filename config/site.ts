@@ -174,22 +174,29 @@ export const site = {
       image: "/projects/fitmart.png",
       categories: ["Open Source"],
     },
-    // {
-    //   title: "Nexus",
-    //   blurb:
-    //     "A workspace-based project management app featuring kanban boards, real-time activity tracking, nodemailer notifications, and robust team collaboration.",
-    //   story:
-    //     "Built to mimic enterprise collaboration canvases. Employs Next-Auth for role-based authentication, TanStack Query for caching and server synchronization, Recharts for team productivity insights, and @dnd-kit for seamless drag-and-drop workflow task transitions. Backed by a clean PostgreSQL database schema via Prisma.",
-    //   stack: ["Next.js", "Prisma", "PostgreSQL", "React Query", "@dnd-kit", "Next-Auth"],
-    //   year: "2026",
-    //   links: {
-    //     source: "https://github.com/ParthBhuptani/nexus",
-    //   },
-    //   featured: false,
-    //   status: "In Progress",
-    //   image: "/projects/nexus.png",
-    //   categories: ["Fullstack", "Backend"],
-    // },
+    {
+      title: "PromptGenius",
+      blurb:
+        "AI-powered Chrome extension that rewrites, enhances, and optimizes prompts directly inside your browser.",
+      story:
+        "PromptGenius is a Chrome Extension designed to improve prompt writing without leaving your current webpage. It integrates Google Gemini to rewrite, enhance, summarize, and optimize prompts for different AI platforms. The extension focuses on speed, productivity, and a seamless browser experience while providing instant AI assistance across websites.\n\n*Built to make prompt engineering faster and more accessible inside the browser.*",
+      stack: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Chrome Extension API",
+        "Google Gemini",
+        "Vite",
+      ],
+      year: "2026",
+      links: {
+        source: "https://github.com/ParthBhuptani/promptgenius-chrome-extension",
+      },
+      featured: true,
+      status: "Completed",
+      image: "/projects/promptgenius.png",
+      categories: ["Extension"],
+    }
   ] as Project[],
   skills: [
     "React",
