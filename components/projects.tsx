@@ -56,11 +56,11 @@ export function ProjectCard({ p, i }: { p: Project; i: number }) {
                 loading="lazy"
               />
 
-              {p.featured && (
+              /* {p.featured && (
                 <span className="absolute right-3 top-3 z-10 rounded-full bg-accent/10 backdrop-blur-md px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-accent border border-accent/20">
                   featured
                 </span>
-              )}
+              )} */
             </div>
           )}
 
