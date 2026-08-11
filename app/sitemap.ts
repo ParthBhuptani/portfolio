@@ -1,8 +1,10 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { site } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = site.url || "https://parthbhuptani.dev";
+  const baseUrl =
+    site.url || "https://parthbhuptani.vercel.app";
+
   return [
     {
       url: baseUrl,
@@ -13,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.8,
     },
   ];
