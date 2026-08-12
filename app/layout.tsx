@@ -38,7 +38,8 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
 
-  description: site.tagline,
+  description:
+  "Parth Bhuptani is a Full Stack Developer from Ahmedabad building modern web applications, AI-powered products, and open-source projects with React, Next.js, TypeScript, and Node.js.",
 
   applicationName: site.name,
 
