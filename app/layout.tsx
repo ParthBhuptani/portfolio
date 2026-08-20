@@ -103,10 +103,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: `${baseUrl}/icon.jpg`,
+        url: `${baseUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: `${site.name} — ${site.role}`,
+        alt: "Parth Bhuptani — Full Stack Developer",
       },
     ],
   },
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: site.tagline,
-    images: [`${baseUrl}/icon.jpg`],
+    images: [`${baseUrl}/og-image.png`],
   },
 
   icons: {
