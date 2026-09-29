@@ -63,7 +63,7 @@ export const site = {
     linkedin: "https://linkedin.com/in/parth-bhuptani",
     twitter: "https://x.com/ParthBhuptani10",
     email: "mailto:parthbhuptani10@gmail.com",
-    resume: "",
+    resume: "/resume",
     // discord: "https://discord.gg/parthbhuptani",
     medium: "https://medium.com/@parthbhuptani",
   },

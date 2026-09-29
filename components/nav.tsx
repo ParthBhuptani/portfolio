@@ -6,6 +6,7 @@ import { Sun, Moon, Menu, X, Search } from "lucide-react";
 import { site } from "@/config/site";
 import { useTheme } from "next-themes";
 import { CommandPalette } from "./command-palette";
+import { usePathname } from "next/navigation";
 
 // const { theme, setTheme } = useTheme();
 
@@ -27,6 +28,10 @@ function SunMoon({ theme }: { theme: string }) {
 
 export function Nav() {
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
+
+  const navHref = (section: string) =>
+    pathname === "/" ? `#${section}` : `/#${section}`;
   
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -86,7 +91,7 @@ export function Nav() {
           {links.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={navHref(l.href.replace("#", ""))}
               className="rounded-full px-3 py-1.5 text-sm text-muted transition-colors hover:bg-fg/5 hover:text-fg"
             >
               {l.label}
@@ -135,7 +140,7 @@ export function Nav() {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={navHref(l.href.replace("#", ""))}
                 onClick={() => setOpen(false)}
                 className="block rounded-xl px-4 py-3 text-sm text-muted transition-colors hover:bg-fg/5 hover:text-fg"
               >

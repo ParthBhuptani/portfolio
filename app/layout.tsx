@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
 
   description:
-  "Parth Bhuptani is a Full Stack Developer from Ahmedabad building modern web applications, AI-powered products, and open-source projects with React, Next.js, TypeScript, and Node.js.",
+    "Parth Bhuptani is a Full Stack Developer from Ahmedabad building modern web applications, AI-powered products, and open-source projects with React, Next.js, TypeScript, and Node.js.",
 
   applicationName: site.name,
 
@@ -165,6 +165,13 @@ const jsonLd = {
     "Open Source",
   ],
 };
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  alternateName: "Parth Bhuptani Portfolio",
+  url: baseUrl,
+};
 
 export default function RootLayout({
   children,
@@ -199,6 +206,14 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLd),
+          }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
           }}
         />
       </body>

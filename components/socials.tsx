@@ -118,7 +118,11 @@ export function Socials({
             >
               <a
                 href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
+                target={
+                  key === "resume" || href.startsWith("mailto")
+                    ? undefined
+                    : "_blank"
+                }
                 rel="noopener noreferrer"
                 className="group flex h-11 w-11 items-center justify-center rounded-2xl border bg-surface/30 text-muted transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-surface/50 hover:text-fg"
               >
@@ -152,6 +156,7 @@ export function Socials({
                           src={card.avatar}
                           alt={`${site.name} profile`}
                           fill
+                          sizes="48px"
                           className={`w-full h-full object-cover transition-transform duration-300 ${card.avatarClass ?? ""}`}
                         />
                       </div>
