@@ -46,7 +46,7 @@ const hoverCardsData: Record<string, {
     avatar: "/social/linkedin.jpg",
     avatarClass: "scale-110 object-top",
     pronouns: "He/Him",
-    handle: "in/parth-bhuptani",
+    handle: "in/parthbhuptani",
     bio: "Building full-stack applications while continuously learning through real-world projects.",
     stats: ["Open for Work", "Gujarat, India"],
     bannerText: "network • build • grow",

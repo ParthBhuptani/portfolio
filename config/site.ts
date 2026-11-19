@@ -53,14 +53,14 @@ export const site = {
   ],
   status: {
     available: true,
-    availableText: "open to opportunities",
+    availableText: "Open to opportunities",
     nowLearning: " Python Fundamentals • System Design • DSA ",
     nowBuilding: "FitTrack",
     nowListening: "coding playlists",
   },
   socials: {
     github: "https://github.com/ParthBhuptani",
-    linkedin: "https://linkedin.com/in/parth-bhuptani",
+    linkedin: "https://linkedin.com/in/parthbhuptani",
     twitter: "https://x.com/ParthBhuptani10",
     email: "mailto:parthbhuptani10@gmail.com",
     resume: "/resume",
@@ -76,13 +76,13 @@ export const site = {
         "Building responsive AI-powered frontend interfaces and collaborating with the engineering team to develop production-ready web applications.",
       url: "https://internship.flyrank.ai/intern",
     },
-    {
-      company: "Independent Developer",
-      role: "Full Stack Developer",
-      period: "2025 — Present",
-      blurb:
-        "Built and deployed AI-powered full-stack applications including FitTrack, SplitSmart, and AI Travel Planner while strengthening full-stack development through real-world projects.",
-    },
+    // {
+    //   company: "Independent Developer",
+    //   role: "Full Stack Developer",
+    //   period: "2025 — Present",
+    //   blurb:
+    //     "Built and deployed AI-powered full-stack applications including FitTrack, SplitSmart, and AI Travel Planner while strengthening full-stack development through real-world projects.",
+    // },
   ] as Job[],
   projects: [
     {
@@ -108,6 +108,104 @@ export const site = {
       image: "/projects/fittrack.png",
       categories: ["AI", "Frontend"],
     },
+
+    {
+      title: "PaperPilot",
+      blurb:
+        "AI-powered research companion that helps students discover papers, understand research, explore project ideas, and find related open-source repositories.",
+      story:
+        "Built with Python, Streamlit, Gemma 4, and the arXiv and GitHub APIs. PaperPilot searches research papers, generates beginner, student, and expert-level summaries, answers follow-up questions using paper abstracts and metadata, suggests weekend-sized project ideas, and discovers related repositories with good first issues.\n\n*From research paper to open-source contribution.*",
+      stack: [
+        "Python",
+        "Streamlit",
+        "Gemma 4",
+        "Gemini API",
+        "arXiv API",
+        "GitHub API",
+      ],
+      year: "2026",
+      links: {
+        live: "https://paperpilot-resarch-paper.streamlit.app",
+        source: "https://github.com/ParthBhuptani/paperpilot",
+      },
+      featured: false,
+      status: "In progress",
+      categories: ["AI", "Research", "Hackathon"],
+    },
+    {
+      title: "Dukaan Saathi",
+      blurb:
+        "Multilingual AI-powered WhatsApp reply assistant designed to help Indian small business owners respond to customers naturally.",
+      story:
+        "Built using Python, Gradio, Hugging Face Spaces, and Qwen2.5-7B-Instruct for the Build Small Hackathon. Shop owners can configure their business profile and generate short, friendly, professional customer replies in Hindi, Gujarati, English, and Hinglish. Generated responses can be copied and sent through WhatsApp.\n\n*Making AI useful for everyday local businesses.*",
+      stack: [
+        "Python",
+        "Gradio",
+        "Hugging Face Spaces",
+        "Qwen2.5-7B-Instruct",
+        "Prompt Engineering",
+      ],
+      year: "2026",
+      links: {
+        live: "https://huggingface.co/spaces/ParthBhuptani/build-small-hackathon",
+      },
+      featured: true,
+      status: "Completed",
+      image: "/projects/dukaan_saathi.png",
+      categories: ["AI", "Hackathon"],
+    },
+    {
+      title: "PrepMate AI",
+      blurb:
+        "Multilingual AI voice companion that helps students prepare for placements through interactive learning and interview practice.",
+      story:
+        "Customized a real-time voice AI application into a learning companion for college students and fresh graduates. Uses Deepgram for speech recognition, Gemini for AI responses, Murf Falcon for natural text-to-speech, and LiveKit for real-time voice conversations. Designed to support English, Hindi, and Gujarati across DSA, aptitude, programming, and interview preparation.\n\n*Learn, practise, and prepare through voice conversations.*",
+      stack: [
+        "Python",
+        "TypeScript",
+        "Next.js",
+        "LiveKit",
+        "Deepgram",
+        "Gemini API",
+        "Murf Falcon",
+      ],
+      year: "2026",
+      links: {
+        source: "https://github.com/ParthBhuptani/prepmate-ai",
+      },
+      featured: false,
+      status: "In Progress",
+      categories: ["AI", "Voice AI"],
+    },
+    {
+      title: "LeadOrbit (Open Source)",
+      blurb:
+        "Multi-tenant outbound sales automation platform for managing leads, building campaigns, and tracking outreach engagement.",
+      story:
+        "Built an outbound outreach MVP using Django REST Framework and a JavaScript-based dashboard. Includes organization-based authentication, CSV lead importing, campaign sequences, sender account connections, AI-assisted email drafting, and engagement analytics. Integrates Gmail API for email sending and Twilio for SMS and call workflows when configured.\n\n*Streamlining lead management and campaign outreach.*",
+      stack: [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "Celery",
+        "JavaScript",
+        "Bootstrap 5",
+        "Chart.js",
+        "SQLite",
+        "Gmail API",
+        "Twilio",
+        "OpenRouter",
+        "Gemini API",
+      ],
+      year: "2026",
+      links: {
+        source: "https://github.com/ParthBhuptani/LeadOrbit",
+      },
+      featured: false,
+      status: "Contibutor",
+      categories: ["Open Source"],
+    },
+
     {
       title: "SplitSmart",
       blurb: "AI-powered expense splitting app with bill parsing, smart settlement, and group expense management.",
@@ -146,7 +244,7 @@ export const site = {
         live: "https://ai-travel-planner1.streamlit.app/",
         source: "https://github.com/ParthBhuptani/ai-travel-planner",
       },
-      featured: true,
+      featured: false,
       status: "Completed",
       image: "/projects/aitravelplanner.png",
       categories: ["AI", "Machine Learning"],
@@ -198,6 +296,7 @@ export const site = {
       categories: ["Extension"],
     }
   ] as Project[],
+
   skills: [
     "React",
     "Next.js",
