@@ -3,7 +3,7 @@ import { site } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    site.url || "https://parthbhuptani.vercel.app";
+    site.url || "https://parthbhuptani.me";
 
   return [
     {

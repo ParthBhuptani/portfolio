@@ -88,7 +88,7 @@ without touching the UI components.
 
 ## 🌐 Live Website
 
-**Portfolio:** https://parthbhuptani.vercel.app
+**Portfolio:** https://parthbhuptani.me
 
 ---
 

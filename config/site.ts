@@ -29,7 +29,7 @@ export type Post = {
 
 export const site = {
   name: "Parth Bhuptani",
-  url: "https://parthbhuptani.vercel.app",
+  url: "https://parthbhuptani.me",
   profileImages: [
     "/profile.jpg",
   ],

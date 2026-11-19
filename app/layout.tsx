@@ -26,7 +26,7 @@ const mono = JetBrains_Mono({
 });
 
 const baseUrl =
-  site.url || "https://parthbhuptani.vercel.app";
+  site.url || "https://parthbhuptani.me";
 
 const siteTitle = `${site.name} — ${site.role}`;
 
