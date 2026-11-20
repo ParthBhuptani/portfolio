@@ -70,10 +70,10 @@ export const site = {
   experience: [
     {
       company: "FlyRank AI",
-      role: "Frontend AI Engineer Intern",
-      period: "2026 — Present",
+      role: "Backend AI Engineer - Intern",
+      period: "Sep 2026 — Present",
       blurb:
-        "Building responsive AI-powered frontend interfaces and collaborating with the engineering team to develop production-ready web applications.",
+        "Working on backend development for AI-powered applications, focusing on API design, database integration, and reliable server-side workflows. Exploring retrieval-augmented generation (RAG), structured outputs, AI agents, and tool-calling workflows, with an emphasis on data grounding, output validation, evaluation, and error handling.",
       url: "https://internship.flyrank.ai/intern",
     },
     // {
