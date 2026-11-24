@@ -100,7 +100,7 @@ export const site = {
       ],
       year: "2026",
       links: {
-        live: "https://fittrack-planner.vercel.app/",
+        live: "https://fittrack.parthbhuptani.me/",
         source: "https://github.com/ParthBhuptani/fittrack",
       },
       featured: true,
